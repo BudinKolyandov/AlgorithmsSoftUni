@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MergeSort;
+using System;
+using System.Linq;
 
 namespace SortingAndSearching
 {
@@ -6,7 +8,11 @@ namespace SortingAndSearching
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+            Mergesort<int>.Sort(input);
+
+            Console.WriteLine(string.Join(' ', input));
         }
     }
 }
